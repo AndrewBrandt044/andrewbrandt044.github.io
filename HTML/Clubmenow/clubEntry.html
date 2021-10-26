@@ -51,6 +51,13 @@
 	let newClubDistances;
 	
 	function addClub() {
+ 	var arr = localStorage.getItem("clubs");
+
+	var arr_1 = [ 199, "Dr",  "Driver",   0, 0, 0, 0, 10.5, 230, 200];
+
+for (let i = 0; i < arr.length; i++) { 
+    arr[i].push(arr_1[i]);
+	}
         // your code here
 	}
 	
