@@ -51,15 +51,15 @@
 	let newClubDistances;
 	
 	function addClub() {
- 	var arr = localStorage.getItem("clubs");
+ 	let arr = clubs
 
-	var arr_1 = [ 199, "Dr",  "Driver",   0, 0, 0, 0, 10.5, 230, 200];
+	let arr_1 = [ 199, "Dr",  clubRow,   0, 0, 0, 0, 10.5, 230, 200]
 
-for (let i = 0; i < arr.length; i++) { 
-    arr[i].push(arr_1[i]);
+	arr_1.push(arr);	
+
+	localStorage.setItem("clubs",arr_1);        
 	}
-        // your code here
-	}
+
 	
 	// navigate to club distance LIST screen
     function cancelClub() {
