@@ -91,7 +91,11 @@ function displayClubDistanceEntryForm(c) {
 
 // replace the current "clubs" array with the previous one
 function undoLastShot() {
-        // your code here !
+		//get previous "clubs" array
+		var str = localStorage.getItem("clubsUndo");
+		localStorage.setItem("clubs",str);
+    //refresh page?
+    window.location.href = "clubDistanceList.html"; 
 }
 
 // create a new (default) "clubs" array
@@ -127,10 +131,8 @@ function resetAllClubDistances() {
 
 // navigate to "About" screen
 function displayAbout() {
-	alert("ClubMeNow Version 1.0.0");
-
-	// your code here
-	// window.location.href = "clubAbout.html";
+	//Create an alertbox to display version of app
+	alert("ClubMeNow Version 1.0.");
 }
 
 // navigate to "Penalty Info" screen
